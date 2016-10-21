@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+ jenkins:
+  build: /home/ubuntu/DWD_Project/Jenkins/
+  ports:
+   - "8080:8080"
+  tty: true
+
+ jira:
+  build: /home/ubuntu/DWD_Project/Jira/
+  ports:
+   - "8081:8080"
+  tty: true
+
+ nexus:
+  build: /home/ubuntu/DWD_Project/Nexus/
+  ports:
+   - "8082:8081"
+  tty: true
+
+ zabbix:
+  build: /home/ubuntu/DWD_Project/Zabbix/
+  ports:
+   - "8083:80"
+  tty: true
+
+ urbancode-deploy:
+  build: /home/ubuntu/DWD_Project/UrbanCode-Deploy/
+  ports:
+   - "8084:8080"
+   - "8443:8443"
+  tty: true
